@@ -27,6 +27,22 @@ Foram implementados dois serviços:
 
 ---
 
+## ▶️ Como executar o projeto
+
+Clone o repositório:
+
+```bash
+git clone (https://github.com/Carl0sSilva/IFSP-apis-rest)
+cd IFSP-apis-rest
+```
+
+Execute os containers:
+
+```bash
+docker compose up --build
+```
+
+---
 
 ## 🌐 Testando os serviços
 
