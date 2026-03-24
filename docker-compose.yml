@@ -1,0 +1,25 @@
+services:
+
+  times:
+    build: ./times
+    container_name: ms-times
+    ports:
+      - "8001:8000"
+    networks:
+      - ms-network
+
+  partidas:
+    build: ./partidas
+    container_name: ms-partidas
+    ports:
+      - "8000:8000"
+    depends_on:
+      - times
+    environment:
+      - TIMES_URL=http://times:8000
+    networks:
+      - ms-network
+
+networks:
+  ms-network:
+    driver: bridge
